@@ -14,7 +14,7 @@ class ClaudeTandem < Formula
     libexec.install "bin", "macos", "skills", "VERSION"
     # The scripts find their own files from their path, and record it in the menu-bar app and
     # the Dock launchers they build. Point them at opt/, which survives upgrades; the Cellar doesn't.
-    python = Formula["python@3.14"].opt_libexec/"bin"
+    python = formula_opt_libexec("python@3.14")/"bin"
     %w[tandem mirror claude-profile].each do |cmd|
       (bin/cmd).write <<~SH
         #!/bin/bash
@@ -37,6 +37,6 @@ class ClaudeTandem < Formula
   test do
     assert_equal version.to_s, shell_output("#{bin}/tandem version").strip
     assert_match "SKILL.md", shell_output("#{bin}/tandem skill --print")
-    system Formula["python@3.14"].opt_libexec/"bin/python3", "-c", "import PIL"
+    system formula_opt_libexec("python@3.14")/"bin/python3", "-c", "import PIL"
   end
 end
