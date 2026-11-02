@@ -1,8 +1,8 @@
 class ClaudeTandem < Formula
   desc "Run several Claude accounts side by side on a Mac, and hand work between them"
   homepage "https://github.com/altsang/claude-tandem"
-  url "https://github.com/altsang/claude-tandem/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "531f54bbbdc8a0bbfe6990635e182b0ff3a47db66a8732102374f040ef6dcbd6"
+  url "https://github.com/altsang/claude-tandem/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "b068d5dc3b35a7ed9c307981513ded509850a043202de44f0c0f61c80173ade1"
   license "MIT"
   head "https://github.com/altsang/claude-tandem.git", branch: "main"
 
@@ -28,9 +28,11 @@ class ClaudeTandem < Formula
       Add the /handoff skill to each Claude account you hand work from:
         tandem skill        # shows the file; then Claude › Settings › Skills › Add
 
-      The menu-bar app is built on this Mac, and needs the Command Line Tools:
+      The app (menu bar and window) is built on this Mac, and needs the Command Line Tools:
         xcode-select --install
         tandem menubar
+      Then turn on Open at Login in its Settings, so it hears about handoffs.
+      No app wanted, or a server? `tandem watch --install` runs its background half headless.
     EOS
   end
 
