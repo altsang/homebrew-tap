@@ -1,8 +1,8 @@
 class ClaudeTandem < Formula
   desc "Run several Claude accounts side by side on a Mac, and hand work between them"
   homepage "https://github.com/altsang/claude-tandem"
-  url "https://github.com/altsang/claude-tandem/archive/refs/tags/v1.3.1.tar.gz"
-  sha256 "026bd5a38cdb8fb5c8eb70abba06acf8dc1806ad58fbd1c3a2234b1224fef2dd"
+  url "https://github.com/altsang/claude-tandem/archive/refs/tags/v1.3.2.tar.gz"
+  sha256 "e439dab44578f2b0ebc28d3d13b5bc4efe1e9613ad34f9d668d3052c2cc05b17"
   license "GPL-3.0-or-later"
   head "https://github.com/altsang/claude-tandem.git", branch: "main"
 
